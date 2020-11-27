@@ -977,7 +977,7 @@ func (co *Compiler) compileArgLimit(sel *Select, arg *graph.Arg) error {
 func (co *Compiler) compileArgOffset(sel *Select, arg *graph.Arg) error {
 	node := arg.Val
 
-	if node.Type != graph.NodeVar {
+	if node.Type != graph.NodeNum {
 		return argErr("offset", "variable")
 	}
 
